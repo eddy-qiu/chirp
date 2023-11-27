@@ -99,12 +99,13 @@ const Home: NextPage = () => {
           <div className="flex border-b border-slate-400 p-4">
             {!isSignedIn && (
               <div className="flex justify-center">
-                <SignInButton />
+                <SignInButton>
+                <button className="text-black">Sign In</button>
+                </SignInButton>
               </div>
             )}
             {isSignedIn && <CreatePostWizard />}
           </div>
-
           <Feed />
         </div>
       </main>
